@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --bg-dark-primary: #171717;
+    --bg-dark-secondary: #212121;
+    --modal-bg-dark: #2f2f2f;
+    --accent-green: #0ba37f;
+    --accent-green-hover: #088769;
+    --alert: #d41414;
+    --btn-secondary: #212121;
+    --text-color: white;
+    --border: 1px solid #424242;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-dark-primary);
+    color: var(--text-color);
+    font-family: "Roboto Slab", serif;
+}
+
+/* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+    ::-webkit-scrollbar {
+        /* background: aquamarine; */
+        padding: 10px;
+        margin: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        padding: 10px;
+        margin: 10px;
+        background: cornflowerblue;
+    }
+}
+
+.image-inverted {
+    filter: invert(100%);
+}
+
+.nav-link {
+    font-weight: 400;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+/* to change the outline style of the input in normal and focused form */
+/* overriding mui classes */
+.MuiOutlinedInput-input-root.Mui-focused,
+.MuiOutlinedInput-notchedOutline {
+    border-color: #424242 !important;
+}
+
+.btn-alert {
+    background-color: var(--alert) !important;
+}
+.btn-accent {
+    background-color: var(--accent-green) !important;
+}
+.bg-dark-primary {
+    background-color: var(--bg-dark-primary) !important;
+}
+.bg-dark-secondary {
+    background-color: var(--bg-dark-secondary) !important;
+}
+.modal-dark {
+    background-color: var(--modal-bg-dark) !important;
+}
+.border {
+    border: var(--border);
+}
+.text-primary {
+    color: var(--text-color);
+}
+.btn-accent-hover {
+    &:hover {
+        background-color: var(--accent-green-hover) !important;
+    }
+}
+.btn-hover {
+    &:hover {
+        background-color: var(--bg-dark-secondary) !important;
+    }
+}
